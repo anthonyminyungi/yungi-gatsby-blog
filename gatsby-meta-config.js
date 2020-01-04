@@ -21,7 +21,7 @@ module.exports = {
     countOfInitialPost: 10, // Config your initial count of post
   },
   sponsor: {
-    buyMeACoffeeId: '',
+    buyMeACoffeeId: 'anthonymin',
   },
   share: {
     facebookAppId: '2682139905214006', // Add facebookAppId for using facebook share feature v3.2

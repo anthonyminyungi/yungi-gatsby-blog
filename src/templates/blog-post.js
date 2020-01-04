@@ -33,10 +33,9 @@ export default ({ data, pageContext, location }) => {
       <PostTitle title={post.frontmatter.title} />
       <PostContainer html={post.html} />
       <SocialShare title={post.frontmatter.title} author={author} />
-      {!!sponsor.buyMeACoffeeId &&
-        {
-          /* <SponsorButton sponsorId={sponsor.buyMeACoffeeId} /> */
-        }}
+      {!!sponsor.buyMeACoffeeId && (
+        <SponsorButton sponsorId={sponsor.buyMeACoffeeId} />
+      )}
       <Elements.Hr />
       <Bio />
       <PostNavigator pageContext={pageContext} />
