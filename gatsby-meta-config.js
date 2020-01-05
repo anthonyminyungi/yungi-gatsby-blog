@@ -12,7 +12,16 @@ module.exports = {
     instagram: `min_stagrams`,
   },
   icon: `content/assets/felog.png`, // Add your favicon
-  keywords: [`blog`],
+  keywords: [
+    `blog`,
+    `javascript`,
+    `js`,
+    `web`,
+    `react`,
+    `frontend`,
+    `develop`,
+    `yungi`,
+  ],
   comment: {
     disqusShortName: '', // Your disqus-short-name. check disqus.com.
     utterances: 'anthonyminyungi/yungi-gatsby-blog', // Your repository for archive comment
