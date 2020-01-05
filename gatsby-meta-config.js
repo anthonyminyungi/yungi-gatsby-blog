@@ -1,6 +1,6 @@
 module.exports = {
   title: `Yungi's Dev Blog`,
-  description: `Blog posted about Develop and Daily life`,
+  description: `Yungi's blog about Development study and Daily life`,
   author: `[Anthony min]`,
   introduction: `기술에 관심이 많은 대학생입니다.\n배우는 것을 즐기며 지내고 있습니다.`,
   siteUrl: `https://yungis.dev`, // Your blog site url

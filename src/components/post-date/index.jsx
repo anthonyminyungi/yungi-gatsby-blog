@@ -1,3 +1,5 @@
 import React from 'react'
 
-export const PostDate = ({ date }) => <p>{date}</p>
+import './index.scss'
+
+export const PostDate = ({ date }) => <p className="post-date">{date}</p>
