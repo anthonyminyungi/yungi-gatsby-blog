@@ -88,8 +88,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://anthonymin.netlify.com',
-        sitemap: 'https://anthonymin.netlify.com/sitemap.xml',
+        host: 'https://yungis.dev',
+        sitemap: 'https://yungis.dev/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
