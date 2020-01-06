@@ -57,34 +57,37 @@ Predicting final exam score based on time spent 을 기준으로 예를 들어
 - 이를 넓은 점수 범위에 대해서 예측하는 것을 **regression** 이라고 한다.
 
 * regression model
-  |x(hours)|y(score)|
-  |:---:|:---:|
-  |10|90|
-  |9|80|
-  |3|50|
-  |2|30|
+
+| <center>x(hours)</center> | <center>y(score)</center> |
+| :-----------------------: | ------------------------: |
+|    <center>10</center>    |       <center>90</center> |
+|    <center>9</center>     |       <center>80</center> |
+|    <center>3</center>     |       <center>50</center> |
+|    <center>2</center>     |       <center>30</center> |
 
 - 혹은 pass/fail과 같은 이분법적으로 나누어 예측하는 것을  
   **binary-classification**이라고 한다.
 
 * binary-classification model
-  |x(hours)|y(score)|
-  |:---:|:---:|
-  |10|P|
-  |9|P|
-  |3|F|
-  |2|F|
+
+| <center>x(hours)</center> | <center>y(score)</center> |
+| :-----------------------: | ------------------------: |
+|    <center>10</center>    |        <center>P</center> |
+|    <center>9</center>     |        <center>P</center> |
+|    <center>3</center>     |        <center>F</center> |
+|    <center>2</center>     |        <center>F</center> |
 
 - 문자화된 grade를 매기려고 하는데, A,B,C,D,F와 같이 점수를 매기는 것을 예측하려고 한다면  
   **multi-label classification**이라고 한다.
 
 * regression model
-  |x(hours)|y(score)|
-  |:---:|:---:|
-  |10|A|
-  |9|B|
-  |3|D|
-  |2|F|
+
+| <center>x(hours)</center> | <center>y(score)</center> |
+| :-----------------------: | ------------------------: |
+|    <center>10</center>    |        <center>A</center> |
+|    <center>9</center>     |        <center>B</center> |
+|    <center>3</center>     |        <center>D</center> |
+|    <center>2</center>     |        <center>F</center> |
 
 ###TensorFlow
 Tensorflow란 Machine intelligence를 위한 Open source library이다.  
@@ -124,21 +127,22 @@ _TensorFlow라고 부른다고 한다._
 (앞서 예로 들었던) 어떠한 학생이 공부한 시간 만큼 어떠한 성적(0~100)이 나온다는 데이터를 가지고 Supervised learning을 시킨다고 하자.
 
 - regression model
-  |x(hours)|y(score)|
-  |:---:|:---:|
-  | 10 | 90 |
-  | 9 | 80 |
-  | 3 | 50 |
-  | 2 | 30 |
+
+| <center>x(hours)</center> | <center>y(score)</center> |
+| :-----------------------: | ------------------------: |
+|    <center>10</center>    |       <center>90</center> |
+|    <center>9</center>     |       <center>80</center> |
+|    <center>3</center>     |       <center>50</center> |
+|    <center>2</center>     |       <center>30</center> |
 
 Regression이란 모델이 Training data를 가지고 Regression model이 학습을 하게 되었을 때,  
 7시간 공부한 학생에 대한 점수를 요청하면, 그에 대한 y값을 준다는 맥락이다.
 
-|  x  |  y  |
-| :-: | :-: |
-|  1  |  1  |
-|  1  |  2  |
-|  3  |  3  |
+| <center>x</center> | <center>y</center> |
+| :----------------: | -----------------: |
+| <center>1</center> | <center>1</center> |
+| <center>2</center> | <center>2</center> |
+| <center>3</center> | <center>3</center> |
 
 위와 같은 training data가 있다고 했을 때, regression 모델을 학습시킨다고 하면  
 다음과 같은 형태의 그래프가 만들어진다.
