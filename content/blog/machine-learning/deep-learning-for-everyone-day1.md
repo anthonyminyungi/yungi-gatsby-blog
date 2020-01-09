@@ -5,7 +5,7 @@ category: machine-learning
 draft: false
 ---
 
-> 이 포스팅은 [인프런 머신러닝 강좌](https://www.inflearn.com/course/%EA%B8%B0%EB%B3%B8%EC%A0%81%EC%9D%B8-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EB%94%A5%EB%9F%AC%EB%8B%9D-%EA%B0%95%EC%A2%8C#)을 수강하며 들은 내용을 정리한 것입니다.
+> 이 포스팅은 <a target="_blank" href="https://www.inflearn.com/course/%EA%B8%B0%EB%B3%B8%EC%A0%81%EC%9D%B8-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EB%94%A5%EB%9F%AC%EB%8B%9D-%EA%B0%95%EC%A2%8C#">인프런 머신러닝 강좌</a>를 수강하며 공부한 내용을 정리한 것입니다.
 >
 > > 사실 이 강좌에 대해서 접한 지는 꽤 오랜 시간이 지났는데, 수강하게 된 것도, 이 분야를 접하게 된 것도 지금에 와서야 라서 아쉬운 감이 있다.
 
@@ -117,7 +117,7 @@ _TensorFlow라고 부른다고 한다._
 이건 예상 못했기 때문에 이 부분에 대한 실습 관련 내용은  
 추가적인 포스팅으로 다루도록 해야겠다.
 
-> 실습과 관련된 코드는 이 코스를 운영하시는 [교수님의 Repository](https://github.com/hunkim/DeepLearningZeroToAll)에 있다고 한다.
+> 실습과 관련된 코드는 이 코스를 운영하시는 <a target="_blank" href="https://github.com/hunkim/DeepLearningZeroToAll">교수님의 Repository</a>에 있다고 한다.
 
 ##섹션2. Linear Regression의 개념.
 
