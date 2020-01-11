@@ -181,3 +181,5 @@ print(sess.run(hypothesis, feed_dict={X: [1.5 3.5]}))
 1. _첫 번째로, TensorFlow Operation을 이용해서 **Graph(Tensors)를 빌드**해야 한다._
 2. _그 다음, `sess.run`을 통해 data를 넣은 뒤 우리가 만든 **Graph를 실행**시킨다._
 3. _그 결과로, 그래프 안에 있는 어떠한 값들이 `update`되거나, 어떠한 값을 `return`하게 된다._
+
+~~ 다음엔 꼭 한 섹션(이론 + 실습)을 한 편으로 구성해서 작성해야겠다... ~~
