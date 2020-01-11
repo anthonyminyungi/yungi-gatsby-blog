@@ -7,9 +7,9 @@ draft: false
 
 > 이 포스팅은 <a target="_blank" href="https://www.inflearn.com/course/%EA%B8%B0%EB%B3%B8%EC%A0%81%EC%9D%B8-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EB%94%A5%EB%9F%AC%EB%8B%9D-%EA%B0%95%EC%A2%8C#">인프런 머신러닝 강좌</a> 를 수강하며 공부한 내용을 정리한 것입니다.
 
-### 지난 시간에 못한 TensorFlow 실습
+###지난 시간에 못한 TensorFlow 실습
 
-#### 섹션 1 실습
+###섹션 1 실습 (기본적인 operations)
 
 ```python
 import tensorflow as tf
