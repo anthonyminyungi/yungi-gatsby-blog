@@ -45,7 +45,7 @@ export const Toc = ({ headingSelector, getTitle, getDepth, ...rest }) => {
     if (themeName !== theme) {
       setTheme(themeName)
     }
-  }, [headingSelector, getTitle, getDepth, themeName])
+  }, [headingSelector, getTitle, getDepth])
 
   const scrollHandler = throttle(() => {
     const { titles, nodes } = headings
