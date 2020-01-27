@@ -58,7 +58,7 @@ export const TocLink = styled.a`
   margin-left: ${props => props.depth + `em`};
   border-top: ${props =>
     props.depth === 0 && `1px solid ` + props.theme.lighterGray};
-  &:hover ${TocLink} {
+  &:hover {
     color: violet;
   }
 `
