@@ -41,7 +41,11 @@ export const Toc = ({ headingSelector, getTitle, getDepth, ...rest }) => {
     }))
     const minDepth = Math.min(...titles.map(h => h.depth))
     setHeadings({ titles, nodes, minDepth })
-  }, [headingSelector, getTitle, getDepth])
+    const themeName = document.querySelector(`body`).className
+    if (themeName !== theme) {
+      setTheme(themeName)
+    }
+  }, [headingSelector, getTitle, getDepth, themeName])
 
   const scrollHandler = throttle(() => {
     const { titles, nodes } = headings
@@ -54,13 +58,6 @@ export const Toc = ({ headingSelector, getTitle, getDepth, ...rest }) => {
     setActive(activeIndex === -1 ? titles.length - 1 : activeIndex - 1)
   }, throttleTime)
   useEventListener(`scroll`, scrollHandler)
-  useEffect(() => {
-    const themeName = document.querySelector(`body`).className
-    if (themeName !== theme) {
-      setTheme(themeName)
-    }
-  })
-  console.log(theme)
   return (
     <>
       <TocToggle
