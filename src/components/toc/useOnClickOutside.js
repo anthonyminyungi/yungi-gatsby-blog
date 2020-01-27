@@ -1,11 +1,15 @@
-import { useEventListener } from './useEventListener'
+import { useEffect } from 'react'
 
-export function useOnClickOutside(ref, handler, events) {
+export const useOnClickOutside = (ref, handler, events) => {
   if (!events) events = [`mousedown`, `touchstart`]
-  const detectClickOutside = event =>
-    ref.current &&
-    event &&
-    !ref.current.contains(event.target) &&
-    handler(event)
-  useEventListener(events, detectClickOutside)
+  useEffect(() => {
+    const detectClickOutside = event =>
+      !ref.current.contains(event.target) && handler()
+    for (const event of events)
+      document.addEventListener(event, detectClickOutside)
+    return () => {
+      for (const event of events)
+        document.removeEventListener(event, detectClickOutside)
+    }
+  }, [ref, handler, events])
 }

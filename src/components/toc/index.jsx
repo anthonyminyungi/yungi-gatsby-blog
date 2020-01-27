@@ -1,6 +1,5 @@
 import { throttle } from 'lodash'
 import React, { useEffect, useRef, useState } from 'react'
-import { useEventListener } from './useEventListener'
 import { useOnClickOutside } from './useOnClickOutside'
 import { Title, TocDiv, TocIcon, TocLink, TocToggle } from './styles'
 
@@ -47,17 +46,24 @@ export const Toc = ({ headingSelector, getTitle, getDepth, ...rest }) => {
     }
   }, [headingSelector, getTitle, getDepth])
 
-  const scrollHandler = throttle(() => {
-    const { titles, nodes } = headings
-    // Offsets need to be recomputed because lazily-loaded
-    // content increases offsets as user scrolls down.
-    const offsets = nodes.map(el => accumulateOffsetTop(el))
-    const activeIndex = offsets.findIndex(
-      offset => offset > window.scrollY + 0.01 * window.innerHeight
-    )
-    setActive(activeIndex === -1 ? titles.length - 1 : activeIndex - 1)
-  }, throttleTime)
-  useEventListener(`scroll`, scrollHandler)
+  // Add scroll event listener to update currently active heading.
+  useEffect(() => {
+    // Throttling the scrollHandler saves computation and hence battery life.
+    const scrollHandler = throttle(() => {
+      const { titles, nodes } = headings
+      // Offsets need to be recomputed inside scrollHandler because
+      // lazily-loaded content increases offsets as user scrolls down.
+      const offsets = nodes.map(el => accumulateOffsetTop(el))
+      const activeIndex = offsets.findIndex(
+        offset => offset > window.scrollY + 0.8 * window.innerHeight
+      )
+      setActive(activeIndex === -1 ? titles.length - 1 : activeIndex - 1)
+    }, throttleTime)
+
+    window.addEventListener(`scroll`, scrollHandler)
+    return () => window.removeEventListener(`scroll`, scrollHandler)
+  }, [headings])
+
   return (
     <>
       <TocToggle
