@@ -19,7 +19,7 @@ export const Toc = ({ headingSelector, getTitle, getDepth, ...rest }) => {
     nodes: [],
     minDepth: 0,
   })
-  const [theme, setTheme] = useState(document.querySelector(`body`).className)
+  const [theme, setTheme] = useState('')
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState()
   const ref = useRef()
@@ -54,8 +54,8 @@ export const Toc = ({ headingSelector, getTitle, getDepth, ...rest }) => {
     setActive(activeIndex === -1 ? titles.length - 1 : activeIndex - 1)
   }, throttleTime)
   useEventListener(`scroll`, scrollHandler)
-  const themeName = document.querySelector(`body`).className
   useEffect(() => {
+    const themeName = document.querySelector(`body`).className
     if (themeName !== theme) {
       setTheme(themeName)
     }
