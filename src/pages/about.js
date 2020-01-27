@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import { Resume } from '../components/resume'
 import { Layout } from '../layout'
 // import { graphql } from 'gatsby'

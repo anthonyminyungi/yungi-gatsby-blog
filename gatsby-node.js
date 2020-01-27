@@ -22,6 +22,7 @@ exports.createPages = ({ graphql, actions }) => {
                 title
                 category
                 draft
+                showToc
               }
             }
           }
@@ -35,7 +36,10 @@ exports.createPages = ({ graphql, actions }) => {
 
     // Create blog posts pages.
     const posts = result.data.allMarkdownRemark.edges.filter(
-      ({ node }) => !node.frontmatter.draft && !!node.frontmatter.category
+      ({ node }) =>
+        !node.frontmatter.draft &&
+        !!node.frontmatter.category &&
+        !!node.frontmatter.showToc
     )
 
     posts.forEach((post, index) => {
@@ -45,6 +49,7 @@ exports.createPages = ({ graphql, actions }) => {
       createPage({
         path: post.node.fields.slug,
         component: blogPostTemplate,
+        toc: post.node.frontmatter.showToc,
         context: {
           slug: post.node.fields.slug,
           previous,

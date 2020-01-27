@@ -134,7 +134,13 @@ module.exports = (async function() {
 
   const title = await fetchTitle(category)
   const fileName = getFileName(title)
-  const contents = refineContents({ title, date, category, draft: false })
+  const contents = refineContents({
+    title,
+    date,
+    category,
+    draft: false,
+    showToc: true,
+  })
 
   fs.writeFile(`${destDir}/${fileName}.md`, contents, err => {
     if (err) {
