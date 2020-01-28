@@ -106,7 +106,7 @@ export const pageQuery = graphql`
         frontmatter: {
           category: { ne: null }
           draft: { eq: false }
-          showToc: { eq: true }
+          showToc: { ne: null }
         }
       }
     ) {
