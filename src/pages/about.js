@@ -17,7 +17,11 @@ export default ({ data, location }) => {
   //   .map(({ node }) => node)[0]
 
   return (
-    <Layout location={location} title={title}>
+    <Layout
+      showToc={data.allMarkdownRemark.nodes.frontmatter.showToc}
+      location={location}
+      title={title}
+    >
       <Resume />
     </Layout>
     // <div
@@ -60,6 +64,13 @@ export const pageQuery = graphql`
         title
         author
         siteUrl
+      }
+    }
+    allMarkdownRemark {
+      nodes {
+        frontmatter {
+          showToc
+        }
       }
     }
   }
