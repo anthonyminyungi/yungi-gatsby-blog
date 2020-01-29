@@ -41,10 +41,6 @@ export const Toc = ({ headingSelector, getTitle, getDepth, ...rest }) => {
     }))
     const minDepth = Math.min(...titles.map(h => h.depth))
     setHeadings({ titles, nodes, minDepth })
-    const currentTheme = document.querySelector(`body`).className.toString()
-    if (currentTheme !== theme) {
-      setTheme(currentTheme)
-    }
   }, [headingSelector, getTitle, getDepth])
 
   // Add scroll event listener to update currently active heading.
@@ -60,6 +56,12 @@ export const Toc = ({ headingSelector, getTitle, getDepth, ...rest }) => {
       )
       setActive(activeIndex === -1 ? titles.length - 1 : activeIndex - 1)
     }, throttleTime)
+
+    const currentTheme = document.querySelector(`body`).className.toString()
+
+    if (currentTheme !== theme) {
+      setTheme(currentTheme)
+    }
 
     window.addEventListener(`scroll`, scrollHandler)
     return () => window.removeEventListener(`scroll`, scrollHandler)
