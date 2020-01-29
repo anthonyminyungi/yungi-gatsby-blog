@@ -1,5 +1,5 @@
 ---
-title: '[course] 모두를 위한 딥러닝 강좌 day5'
+title: '[course] 모두를 위한 딥러닝 강좌 05'
 date: 2020-01-20 21:01:71
 category: machine-learning
 draft: false

@@ -18,6 +18,7 @@ export const Toc = ({ headingSelector, getTitle, getDepth, ...rest }) => {
     nodes: [],
     minDepth: 0,
   })
+
   const [theme, setTheme] = useState('')
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState()
@@ -40,10 +41,6 @@ export const Toc = ({ headingSelector, getTitle, getDepth, ...rest }) => {
     }))
     const minDepth = Math.min(...titles.map(h => h.depth))
     setHeadings({ titles, nodes, minDepth })
-    const themeName = document.querySelector(`body`).className
-    if (themeName !== theme) {
-      setTheme(themeName)
-    }
   }, [headingSelector, getTitle, getDepth])
 
   // Add scroll event listener to update currently active heading.
@@ -64,6 +61,12 @@ export const Toc = ({ headingSelector, getTitle, getDepth, ...rest }) => {
     return () => window.removeEventListener(`scroll`, scrollHandler)
   }, [headings])
 
+  const currentTheme = document.querySelector(`body`).className.toString()
+
+  useEffect(() => {
+    setTheme(currentTheme)
+  }, [currentTheme])
+
   return (
     <>
       <TocToggle
@@ -71,7 +74,6 @@ export const Toc = ({ headingSelector, getTitle, getDepth, ...rest }) => {
         opener
         open={open}
         onClick={() => setOpen(true)}
-        theme={theme}
       />
       <TocDiv theme={theme} id="toc_container" ref={ref} open={open}>
         <Title>
@@ -83,6 +85,7 @@ export const Toc = ({ headingSelector, getTitle, getDepth, ...rest }) => {
           {headings.titles.map(({ title, depth }, index) => (
             <TocLink
               key={title}
+              theme={theme}
               active={active === index}
               depth={depth - headings.minDepth}
               onClick={event => {
