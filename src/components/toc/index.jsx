@@ -1,7 +1,9 @@
 import { throttle } from 'lodash'
 import React, { useEffect, useRef, useState } from 'react'
+
 import { useOnClickOutside } from './useOnClickOutside'
 import { Title, TocDiv, TocIcon, TocLink, TocToggle } from './styles'
+import './index.scss'
 
 const accumulateOffsetTop = (el, totalOffset = 0) => {
   while (el) {
@@ -19,7 +21,6 @@ export const Toc = ({ headingSelector, getTitle, getDepth, ...rest }) => {
     minDepth: 0,
   })
 
-  const [theme, setTheme] = useState('')
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState()
   const ref = useRef()
@@ -57,12 +58,6 @@ export const Toc = ({ headingSelector, getTitle, getDepth, ...rest }) => {
       setActive(activeIndex === -1 ? titles.length - 1 : activeIndex - 1)
     }, throttleTime)
 
-    const currentTheme = document.querySelector(`body`).className.toString()
-
-    if (currentTheme !== theme) {
-      setTheme(currentTheme)
-    }
-
     window.addEventListener(`scroll`, scrollHandler)
     return () => window.removeEventListener(`scroll`, scrollHandler)
   }, [headings])
@@ -75,7 +70,7 @@ export const Toc = ({ headingSelector, getTitle, getDepth, ...rest }) => {
         open={open}
         onClick={() => setOpen(true)}
       />
-      <TocDiv theme={theme} id="toc_container" ref={ref} open={open}>
+      <TocDiv className="toc_div" id="toc_container" ref={ref} open={open}>
         <Title>
           <TocIcon />
           {tocTitle}
@@ -85,7 +80,7 @@ export const Toc = ({ headingSelector, getTitle, getDepth, ...rest }) => {
           {headings.titles.map(({ title, depth }, index) => (
             <TocLink
               key={title}
-              theme={theme}
+              className={`toc_link ${active === index ? 'active' : ''}`}
               active={active === index}
               depth={depth - headings.minDepth}
               onClick={event => {
