@@ -36,6 +36,7 @@ export const TocDiv = styled.div`
     line-height: 2.75em;
     position: sticky;
     top: 2em;
+    width: 20em;
   }
 `
 
