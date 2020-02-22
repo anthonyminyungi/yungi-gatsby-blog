@@ -29,7 +29,7 @@ export const Layout = ({ showToc, location, title, children }) => {
           style={{
             marginLeft: `auto`,
             marginRight: `auto`,
-            maxWidth: rhythm(24),
+            maxWidth: rhythm(32),
             padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
           }}
         >
