@@ -74,7 +74,7 @@ export const Toc = ({ headingSelector, getTitle, getDepth, ...rest }) => {
         <Title>
           <TocIcon />
           {tocTitle}
-          <TocToggle onClick={() => setOpen(false)} />
+          <TocToggle className="toc_toggle" onClick={() => setOpen(false)} />
         </Title>
         <nav>
           {headings.titles.map(({ title, depth }, index) => (

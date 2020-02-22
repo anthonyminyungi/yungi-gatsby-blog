@@ -23,20 +23,22 @@ export const TocDiv = styled.div`
   ${mediaQuery.maxLaptop} {
     position: fixed;
     bottom: 1em;
-    left: 1em;
+    left: 0.5em;
+    width: 23em;
     ${props => !props.open && `height: 0;`};
     ${props => props.open && openTocDiv};
     visibility: ${props => (props.open ? `visible` : `hidden`)};
     opacity: ${props => (props.open ? 1 : 0)};
     transition: 0.3s;
+    overflow: -moz-hidden-unscrollable;
   }
   ${mediaQuery.minLaptop} {
-    margin-top: 50px;
+    margin-top: 3em;
     font-size: 0.8em;
-    line-height: 2.75em;
+    line-height: 2.5em;
     position: sticky;
     top: 2em;
-    width: 20em;
+    width: 18em;
   }
 `
 
@@ -77,7 +79,7 @@ const openerCss = css`
 `
 
 const closerCss = css`
-  margin-left: 8em;
+  margin-left: 7em;
   width: 1.5em;
   height: 1.5em;
   border-radius: 50%;
