@@ -53,6 +53,7 @@ body.dark {
     }
     &:hover {
       text-shadow: $dark-hover-text-shadow;
+      background-color: $dark-hover-background-color;
     }
   }
 
@@ -82,5 +83,9 @@ body.dark {
       background-color: $navigator-background-color;
       color: $navigator-text-color;
     }
+  }
+
+  .thumbnail-date {
+    color: $dark-link-color;
   }
 }
