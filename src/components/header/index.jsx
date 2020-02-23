@@ -4,10 +4,6 @@ import Search from '../search'
 
 import './index.scss'
 
-const searchIndices = [
-  { name: `Posts`, title: `Blog Posts`, hitComp: `PostHit` },
-]
-
 export const Header = ({ title, location, rootPath }) => {
   const isRoot = location.pathname === rootPath
   return (
@@ -19,7 +15,6 @@ export const Header = ({ title, location, rootPath }) => {
           </Link>
         </h1>
       )}
-      <Search collapse indices={searchIndices} />
     </>
   )
 }
