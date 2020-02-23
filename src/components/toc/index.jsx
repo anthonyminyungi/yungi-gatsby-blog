@@ -1,7 +1,7 @@
 import { throttle } from 'lodash'
 import React, { useEffect, useRef, useState } from 'react'
 
-import { useOnClickOutside } from './useOnClickOutside'
+import { useOnClickOutside } from '../../hooks'
 import { Title, TocDiv, TocIcon, TocLink, TocToggle } from './styles'
 import './index.scss'
 
