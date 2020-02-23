@@ -4,9 +4,21 @@ import './index.scss'
 
 export const Footer = () => (
   <footer className="footer">
-    ©<a href="https://github.com/anthonyminyungi">yungi min</a>, Built with{' '}
-    <a href="https://github.com/JaeYeopHan/gatsby-starter-bee">
+    ©2020{' '}
+    <a target="_blank" href="https://github.com/anthonyminyungi">
+      Yungi Min
+    </a>
+    , Built with{' '}
+    <a target="_blank" href="https://github.com/JaeYeopHan/gatsby-starter-bee">
       Gatsby-starter-bee
+    </a>
+    <br />
+    <a target="_blank" href="/sitemap.xml">
+      Sitemap
+    </a>{' '}
+    |{' '}
+    <a target="_blank" href="/rss.xml">
+      RSS
     </a>
   </footer>
 )
