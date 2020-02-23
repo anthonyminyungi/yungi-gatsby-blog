@@ -52,6 +52,7 @@ body.light {
     }
     &:hover {
       text-shadow: $light-hover-text-shadow;
+      background-color: $light-hover-background-color;
     }
   }
 
@@ -72,5 +73,9 @@ body.light {
       background-color: $navigator-background-color;
       color: $navigator-text-color;
     }
+  }
+
+  .thumbnail-date {
+    color: $light-link-color;
   }
 }

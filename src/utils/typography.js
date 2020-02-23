@@ -14,6 +14,7 @@ GitHubTheme.overrideThemeStyles = () => {
     },
 
     'a:hover': {
+      color: 'rgb(239, 191, 0)',
       textDecoration: `none`,
     },
 

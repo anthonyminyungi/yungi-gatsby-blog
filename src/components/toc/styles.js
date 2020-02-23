@@ -4,13 +4,9 @@ import { Close as Cross } from 'styled-icons/material/Close'
 import mediaQuery from './mediaQuery'
 
 const openTocDiv = css`
-  background: ${props => (props.theme === 'light' ? '#fff' : '#282c35')};
-  color: ${props => (props.theme === 'light' ? 'black' : 'rgb(229, 229, 229)')};
   padding: 0.7em 1.2em;
   border-radius: 0.5em;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
-  border: 1px solid
-    ${props => (props.theme === 'light' ? 'rgb(229, 229, 229)' : 'black')};
 `
 
 export const TocDiv = styled.div`
@@ -27,19 +23,22 @@ export const TocDiv = styled.div`
   ${mediaQuery.maxLaptop} {
     position: fixed;
     bottom: 1em;
-    left: 1em;
+    left: 0.5em;
+    width: 23em;
     ${props => !props.open && `height: 0;`};
     ${props => props.open && openTocDiv};
     visibility: ${props => (props.open ? `visible` : `hidden`)};
     opacity: ${props => (props.open ? 1 : 0)};
     transition: 0.3s;
+    overflow: -moz-hidden-unscrollable;
   }
   ${mediaQuery.minLaptop} {
-    margin-top: 50px;
+    margin-top: 3em;
     font-size: 0.8em;
-    line-height: 2.75em;
+    line-height: 2.5em;
     position: sticky;
     top: 2em;
+    width: 18em;
   }
 `
 
@@ -52,20 +51,14 @@ export const Title = styled.h2`
 
 export const TocLink = styled.a`
   color: ${({ theme, active }) =>
-    active
-      ? `rgb(39, 154, 241)`
-      : theme === 'light'
-      ? 'black'
-      : `rgb(229, 229, 229)`};
+    active ? `rgb(39, 154, 241)` : theme.textColor};
+
   font-weight: ${props => props.active && `bold`};
   display: block;
   text-decoration: none;
   cursor: pointer;
   margin-left: ${props => props.depth + `em`};
   border-top: ${props => props.depth === 0 && `1px solid #aaa`};
-  &:hover {
-    color: rgb(239, 191, 0);
-  }
 `
 
 export const TocIcon = styled(BookContent)`
@@ -81,19 +74,14 @@ const openerCss = css`
   }
   left: 0;
   padding: 0.5em 0.6em 0.5em 0.3em;
-  background: ${props => (props.theme === 'light' ? '#fff' : '#282c35')};
-  border: 2px solid
-    ${props => (props.theme === 'light' ? 'rgb(229, 229, 229)' : 'black')};
   border-radius: 0 50% 50% 0;
   transform: translate(${props => (props.open ? `-100%` : 0)});
 `
 
 const closerCss = css`
-  margin-left: 8em;
+  margin-left: 7em;
   width: 1.5em;
   height: 1.5em;
-  border: 1px solid
-    ${props => (props.theme === 'light' ? 'rgb(229, 229, 229)' : 'black')};
   border-radius: 50%;
 `
 

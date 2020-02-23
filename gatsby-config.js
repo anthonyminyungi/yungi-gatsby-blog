@@ -140,6 +140,7 @@ module.exports = {
                     frontmatter {
                       title
                       date
+                      showToc
                     }
                   }
                 }

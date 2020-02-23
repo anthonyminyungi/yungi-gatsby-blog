@@ -6,7 +6,8 @@ draft: false
 showToc: true
 ---
 
-> 이 포스팅은 <a target="_blank" href="https://www.inflearn.com/course/%EA%B8%B0%EB%B3%B8%EC%A0%81%EC%9D%B8-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EB%94%A5%EB%9F%AC%EB%8B%9D-%EA%B0%95%EC%A2%8C#">인프런 머신러닝 강좌</a> 를 수강하며 공부한 내용을 정리한 것입니다.
+> 이 포스팅은 <a target="_blank" href="https://www.inflearn.com/course/%EA%B8%B0%EB%B3%B8%EC%A0%81%EC%9D%B8-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EB%94%A5%EB%9F%AC%EB%8B%9D-%EA%B0%95%EC%A2%8C#">인프런 머신러닝 강좌</a> 를 수강하며 공부한 내용을 정리한 것입니다.  
+> <a target="_blank" href="https://github.com/hunkim/DeepLearningZeroToAll">코드 출처</a>
 
 ###지난 시간에 못한 TensorFlow 실습
 
@@ -22,12 +23,12 @@ sess = tf.Session()
 print(sess.run(hello))
 ```
 
-위의 코드는 우리가 프로그래밍을 배우면서 가장 흔히 알고, 가장 기본적인 `hello world`를 텐서플로에서 실행하는 코드이다.  
-정말 간단하지만, 나 스스로도 텐서플로와 머신러닝을 처음 접하기 때문에, 하나하나 살펴보자면  
-_tensorflow_ 를 import 하여 `tf`라는 이름으로 사용하기로 했었다.  
-`tf.constant`라는 함수를 호출하여 `"Hello, TensorFlow!"`라는 문자열을 `hello`라는 변수에 저장하는 것이다.  
-이렇게 되면 앞서 배운 것과 같이 아무 Edge도 없는 **Data Flow Graph**에 `hello`라는 이름의 하나의 **노드** 가 생긴 것이다.  
-여기서 그냥 출력을 해도 되지만, `Computational Graph`를 실행하기 위해서는 `Session`이라는 것을 만들어야 하고  
+위의 코드는 우리가 프로그래밍을 배우면서 가장 흔히 알고, 가장 기본적인 `hello world`를 텐서플로에서 실행하는 코드이다.
+정말 간단하지만, 나 스스로도 텐서플로와 머신러닝을 처음 접하기 때문에, 하나하나 살펴보자면
+_tensorflow_ 를 import 하여 `tf`라는 이름으로 사용하기로 했었다.
+`tf.constant`라는 함수를 호출하여 `"Hello, TensorFlow!"`라는 문자열을 `hello`라는 변수에 저장하는 것이다.
+이렇게 되면 앞서 배운 것과 같이 아무 Edge도 없는 **Data Flow Graph**에 `hello`라는 이름의 하나의 **노드** 가 생긴 것이다.
+여기서 그냥 출력을 해도 되지만, `Computational Graph`를 실행하기 위해서는 `Session`이라는 것을 만들어야 하고
 이 세션을 통해 `.run`을 호출하여 `sess`라는 이름의 텐서플로 세션을 통해 `hello`라는 노드를 실헹하겠다는 것을 의미한다.
 
 이러한 과정을 통해 출력된 결과는 다음과 같다.
@@ -36,12 +37,12 @@ _tensorflow_ 를 import 하여 `tf`라는 이름으로 사용하기로 했었다
 b'Hello, TesorFlow!'
 ```
 
-여기서 `b`는 **Byte literals**라는 것임을 의미한다.  
+여기서 `b`는 **Byte literals**라는 것임을 의미한다.
 바이트 스트링에 대한 자세한 예는 [이 곳](https://stackoverflow.com/questions/6269765/)에 나와있다고 한다.
 
 ![screenshot](./images/20200109ML-2.png)
-다음 예제는 위와 같은 Computational Graph를 구현하는 것이다.  
-`a`라는 노드와 `b`라는 노드를 하나의 다른 노드로 연결시키는 것이다.  
+다음 예제는 위와 같은 Computational Graph를 구현하는 것이다.
+`a`라는 노드와 `b`라는 노드를 하나의 다른 노드로 연결시키는 것이다.
 아래와 같이 작성해보자.
 
 ```python
@@ -60,7 +61,7 @@ node1: Tensor("Const_1:0, shape=(), dtype=float32) node2: Tensor("Const_2:0, sha
 node3: Tensor("Add:0, shape=(), dtype=float32)
 ```
 
-이를 출력하면 텐서플로가 이들은 그저 그래프 안의 **요소(Tensor)**라고 대답한다.  
+이를 출력하면 텐서플로가 이들은 그저 그래프 안의 **요소(Tensor)**라고 대답한다.
 일반적인 경우처럼 연산에 대한 결과값이 나오는 것이 아니라, 각 Tensor들의 속성에 대한 정보만 출력한다.
 
 > 그렇다면 연산을 실행하려면 어떻게 해야할까?
@@ -106,7 +107,7 @@ print(sess.run(adder_node, feed_dict={a: [1, 3], b: [2,4]}))
 [ 3.  7. ]
 ```
 
-이처럼 placeholder를 활용하여 처음에 값을 지정하지 않은 노드를 만들 수 있고,  
+이처럼 placeholder를 활용하여 처음에 값을 지정하지 않은 노드를 만들 수 있고,
 `feed_dict`를 통해 `sess.run`을 실행하는 과정 중에 동적으로 값을 전달할 수 있다.
 **`sess.run(op, feed_dict={x: x_data})`** 와 같은 용법으로 사용할 수 있다.
 
@@ -119,7 +120,7 @@ print(sess.run(adder_node, feed_dict={a: [1, 3], b: [2,4]}))
 ![Rank](./images/20200109ML-4.png)
 
 - **Rank**란 _몇 차원 배열이냐_ 라는 의미에 해당한다.
-  - `s = 483` 은 `Rank 0`이며 수학적으로는 _Scala_ 라고 불린다.  
+  - `s = 483` 은 `Rank 0`이며 수학적으로는 _Scala_ 라고 불린다.
     1차원은 _Vector_, 2차원은 _Matrix_ ...
 
 ![Shape](./images/20200109ML-5.png)
@@ -147,5 +148,5 @@ print(sess.run(adder_node, feed_dict={a: [1, 3], b: [2,4]}))
 
 ---
 
-내용이 조금 길어지는 것 같아서 나누어 다루어야 할 것 같다.  
+내용이 조금 길어지는 것 같아서 나누어 다루어야 할 것 같다.
 ~~실습 한 강좌인데 정리하면서 들으려니까 왜이렇게 오래걸리는지...~~
