@@ -29,6 +29,10 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: 'gatsby-remark-code-titles',
+            options: {},
+          }, // IMPORTANT: this must be ahead of other plugins that use code blocks
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
@@ -51,7 +55,11 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              inlineCodeMarker: '%',
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
             },
           },
           {

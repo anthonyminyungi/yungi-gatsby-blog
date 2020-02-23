@@ -5,10 +5,49 @@
  * @custoimized by Jbee
  */
 
+//  { lang: `javascript`, tag: `js`, color: `#f7df1e` },
+//  { lang: `js`, tag: `js`, color: `#f7df1e` },
+//  { lang: `jsx`, tag: `jsx`, color: `#61dafb` },
+//  { lang: `env`, tag: `env`, color: `#ff89d3` },
+//  { lang: `python`, tag: `py`, color: `#61da84` },
+//  { lang: `py`, tag: `py`, color: `#61da84` },
+//  { lang: `graphql`, tag: `graphql`, color: `#e10098` },
+//  { lang: `gql`, tag: `graphql`, color: `#e10098` },
+//  { lang: `html`, tag: `html`, color: `#005a9c` },
+//  { lang: `css`, tag: `css`, color: `#ff9800` },
+//  { lang: `shell`, tag: `shell`, color: `white` },
+//  { lang: `sh`, tag: `sh`, color: `white` },
+//  { lang: `bash`, tag: `bash`, color: `white` },
+//  { lang: `yml`, tag: `yaml`, color: `linen` },
+//  { lang: `yaml`, tag: `yaml`, color: `linen` },
+//  { lang: `markdown`, tag: `md`, color: `#e6ffed` },
+//  { lang: `md`, tag: `md`, color: `#e6ffed` },
+//  { lang: `mdx`, tag: `mdx`, color: `#55d179` },
+//  { lang: `json`, tag: `json`, color: `#fff` },
+//  { lang: `diff`, tag: `diff`, color: `#e8bd36` },
+//  { lang: `text`, tag: `text`, color: `gray` },
+
 @import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
 @import './variables.scss';
 
-.gatsby-highlight-code-line {
+.gatsby-code-title {
+  margin-bottom: -0.6rem;
+  padding: 0.5em 0.5em;
+  font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+    'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+    'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
+    monospace;
+
+  background-color: #212121;
+  color: white;
+  z-index: 0;
+  text-align: center;
+  font-size: 95%;
+  border-top-left-radius: 0.6em;
+  border-top-right-radius: 0.6em;
+}
+
+code-line {
   background-color: hsla(207, 95%, 15%, 1);
   display: block;
   margin-right: -1.2em;
@@ -24,8 +63,12 @@ blockquote {
 
 code[class*='language-'],
 pre[class*='language-'] {
-  color: #e0e0e0;
+  color: white;
   background: none;
+  // font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+  //   'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+  //   'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
+  //   monospace;
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
     monospace;
   // 'Fira Code', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono',
@@ -36,7 +79,7 @@ pre[class*='language-'] {
   word-break: normal;
   word-wrap: normal;
   line-height: 1.6;
-  font-size: 88%;
+  font-size: 95%;
 
   -moz-tab-size: 2;
   -o-tab-size: 2;
@@ -58,7 +101,7 @@ pre[class*='language-']::-webkit-scrollbar {
 /* Code blocks */
 pre[class*='language-'] {
   padding: 1.2em;
-  margin: 1.5em 0;
+  margin: 0 0 1.5em 0;
   overflow: auto;
   border-radius: 0.6em;
 }
@@ -77,12 +120,113 @@ pre[class*='language-'] {
   color: $inline-text-color;
 }
 
+pre[class*='language-']::before {
+  background: black;
+  border-radius: 0 0 0.25rem 0.25rem;
+  color: white;
+  font-size: 80%;
+  letter-spacing: 0.025rem;
+  padding: 0.1rem 0.5rem;
+  position: relative;
+  right: 0rem;
+  text-align: center;
+  text-transform: uppercase;
+  top: -1.5em;
+  float: right;
+  margin-bottom: 0.5em;
+}
+
+pre[class='language-javascript']::before,
+pre[class='language-js']::before {
+  content: 'js';
+  background: #f7df1e;
+  color: black;
+}
+
+pre[class='language-html']::before {
+  content: 'html';
+  background: #005a9c;
+  color: white;
+}
+
+pre[class='language-css']::before {
+  content: 'css';
+  background: #ff9800;
+  color: white;
+}
+
+pre[class='language-jsx']::before {
+  content: 'jsx';
+  background: #61dafb;
+  color: white;
+}
+
+pre[class='language-python']::before,
+pre[class='language-py']::before {
+  content: 'py';
+  background: #61da84;
+  color: white;
+}
+
+pre[class='language-env']::before {
+  content: 'env';
+  background: #ff89d3;
+  color: white;
+}
+
+pre[class='language-shell']::before,
+pre[class='language-bash']::before,
+pre[class='language-sh']::before {
+  content: 'sh';
+  background: white;
+  color: black;
+}
+
+pre[class='language-yaml']::before,
+pre[class='language-yml']::before {
+  content: 'yml';
+  background: linen;
+  color: black;
+}
+
+pre[class='language-markdown']::before,
+pre[class='language-md']::before {
+  content: 'md';
+  background: #e6ffed;
+  color: black;
+}
+
+pre[class='language-mdx']::before {
+  content: 'mdx';
+  background: #55d179;
+  color: white;
+}
+
+pre[class='language-json']::before {
+  content: 'json';
+  background: #fff;
+  color: black;
+}
+
+pre[class='language-text']::before,
+pre[class='language-txt']::before {
+  content: 'txt';
+  background: gray;
+  color: white;
+}
+
+pre[class='language-diff']::before {
+  content: 'diff';
+  background: #e8bd36;
+  color: white;
+}
+
 .token.comment,
 .token.block-comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #616161;
+  color: #7d7d7d;
 }
 
 .token.punctuation {
@@ -126,7 +270,7 @@ pre[class*='language-'] {
 .token.attr-value,
 .token.regex,
 .token.variable {
-  color: #00e676;
+  color: #90cc18;
 }
 
 .token.operator,
