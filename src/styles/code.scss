@@ -33,6 +33,7 @@
 $code-pre-background-color: #272822;
 
 .gatsby-code-title {
+  margin-top: 3em;
   margin-bottom: -3.6em;
   padding: 0.5em 0em 1em 0;
   font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
@@ -135,6 +136,7 @@ pre[class*='language-'] {
   white-space: normal;
   background: $inline-dimmed-color;
   color: $inline-text-color;
+  text-shadow: none;
 }
 
 pre[class*='language-']::-moz-selection,
@@ -293,7 +295,7 @@ pre[class*='language-']::before {
   color: white;
   font-size: 0.75rem;
   letter-spacing: 0.075rem;
-  padding: 0.25rem 0.5rem;
+  padding: 0.1rem 0.5rem;
   position: relative;
   right: 1rem;
   text-align: center;
