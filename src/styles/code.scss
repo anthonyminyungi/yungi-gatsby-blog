@@ -227,6 +227,10 @@ code[class*='language-'] ::selection {
   color: rgb(250, 208, 0);
 }
 
+.token.punctuation > .token.function {
+  color: rgb(250, 208, 0);
+}
+
 .token.regex {
   background: #364135;
 }
@@ -302,6 +306,7 @@ pre[class*='language-']::before {
   text-transform: uppercase;
   top: -1.55em;
   float: right;
+  text-shadow: none;
 }
 
 pre[class='language-javascript']::before,

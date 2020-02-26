@@ -192,7 +192,7 @@ Regularization은 이 구부러지는 것을 하지 말고 **펴자**라는 뉘�
 
 이 것을 TensorFlow에서 구현하려고 한다면 매우 간단하다.
 
-```python:title=hello.py
+```python
 l2reg = 0.001 * tf.reduce_sum(tf.square(W))
 cost = cost + l2reg
 ```
@@ -331,7 +331,7 @@ training set은 이름 그대로 이 데이터는 모델을 **학습시키기 �
 
 아래는 이 예제에 대한 전체 코드와 출력 예시이다.
 
-```python:title=hello2.py
+```python
 # Lab 7 Learning rate and Evaluation
 import tensorflow as tf
 tf.set_random_seed(777)  # for reproducibility
