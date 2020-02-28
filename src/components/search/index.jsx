@@ -36,7 +36,9 @@ const useClickOutside = (ref, handler, events) => {
   })
 }
 
-export default function Search({ indices, collapse, hitsAsGrid }) {
+const Search = props => {
+  console.log(props)
+  const { indices, collapse } = props
   const ref = createRef()
   const [query, setQuery] = useState(``)
   const [focus, setFocus] = useState(false)
@@ -53,7 +55,7 @@ export default function Search({ indices, collapse, hitsAsGrid }) {
       root={{ Root, props: { ref } }}
     >
       <Input onFocus={() => setFocus(true)} {...{ collapse, focus }} />
-      <HitsWrapper show={query.length > 0 && focus} asGrid={hitsAsGrid}>
+      <HitsWrapper show={query.length > 0 && focus} collapse>
         {indices.map(({ name, title, hitComp }) => (
           <Index key={name} indexName={name}>
             <header>
@@ -70,3 +72,5 @@ export default function Search({ indices, collapse, hitsAsGrid }) {
     </InstantSearch>
   )
 }
+
+export default Search

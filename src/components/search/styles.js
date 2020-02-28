@@ -124,7 +124,7 @@ export const HitsWrapper = styled.div`
 export const PoweredBy = () => (
   <span css="font-size: 0.6em; text-align: end; padding: 0;">
     Powered by{` `}
-    <a href="https://algolia.com">
+    <a href="https://algolia.com" target="_blank">
       <Algolia size="1em" /> Algolia
     </a>
   </span>
