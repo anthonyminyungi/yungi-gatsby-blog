@@ -5,6 +5,9 @@ require('typeface-catamaran')
 // polyfill
 require('intersection-observer')
 
+// prism theme
+require('prismjs/themes/prism-tomorrow.css')
+
 const metaConfig = require('./gatsby-meta-config')
 
 exports.onInitialClientRender = () => {

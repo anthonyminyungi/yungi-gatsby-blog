@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { graphql } from 'gatsby'
+import ReactDOM from 'react-dom'
 
 import * as Elements from '../components/elements'
 import { Layout } from '../layout'

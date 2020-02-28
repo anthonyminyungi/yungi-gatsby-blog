@@ -8,14 +8,14 @@ export const PostNavigator = ({ pageContext }) => {
 
   return (
     <ul className="navigator">
-      <li>
+      <li id="prev">
         {previous && (
           <Link to={previous.fields.slug} rel="prev">
             ← {previous.frontmatter.title}
           </Link>
         )}
       </li>
-      <li>
+      <li id="next">
         {next && (
           <Link to={next.fields.slug} rel="next">
             {next.frontmatter.title} →
