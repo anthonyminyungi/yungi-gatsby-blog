@@ -10,7 +10,7 @@ import algoliasearch from 'algoliasearch/lite'
 // import { useOnClickOutside } from '../../hooks'
 import { Root, HitsWrapper, PoweredBy } from './styles'
 import Input from './input'
-import * as hitComps from './hitComps'
+import PostHit from './hitComps'
 
 const Results = connectStateResults(
   ({ searchState: state, searchResults: res, children }) =>
@@ -50,23 +50,21 @@ const Search = props => {
   return (
     <InstantSearch
       searchClient={searchClient}
-      indexName={indices[0].name}
+      indexName={indices.name}
       onSearchStateChange={({ query }) => setQuery(query)}
       root={{ Root, props: { ref } }}
     >
       <Input onFocus={() => setFocus(true)} {...{ collapse, focus }} />
       <HitsWrapper show={query.length > 0 && focus} collapse>
-        {indices.map(({ name, title, hitComp }) => (
-          <Index key={name} indexName={name}>
-            <header>
-              <h3>{title}</h3>
-              <Stats />
-            </header>
-            <Results>
-              <Hits hitComponent={hitComps[hitComp](() => setFocus(false))} />
-            </Results>
-          </Index>
-        ))}
+        <Index key={indices.name} indexName={indices.name}>
+          <header>
+            <h3>{indices.title}</h3>
+            <Stats />
+          </header>
+          <Results>
+            <Hits hitComponent={PostHit(() => setFocus(false))} />
+          </Results>
+        </Index>
         <PoweredBy />
       </HitsWrapper>
     </InstantSearch>

@@ -17,7 +17,7 @@ import { Tags } from 'styled-icons/fa-solid/Tags'
 //   )
 // }
 
-export const PostHit = clickHandler => ({ hit }) => {
+const PostHit = clickHandler => ({ hit }) => {
   console.log(hit)
   return (
     <div>
@@ -45,3 +45,5 @@ export const PostHit = clickHandler => ({ hit }) => {
     </div>
   )
 }
+
+export default PostHit

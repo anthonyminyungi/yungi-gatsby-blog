@@ -5,8 +5,8 @@ import { Algolia } from 'styled-icons/fa-brands/Algolia'
 
 export const Root = styled.div`
   position: relative;
-  display: grid;
-  grid-gap: 1em;
+  display: flex;
+  ${'' /* grid-gap: 1em; */}
 `
 
 export const SearchIcon = styled(Search)`
@@ -68,7 +68,7 @@ export const Form = styled.form`
 `
 
 export const HitsWrapper = styled.div`
-  display: ${props => (props.show ? `grid` : `none`)};
+  display: ${props => (props.show ? `flex` : `none`)};
   max-height: 80vh;
   overflow: scroll;
   z-index: 2;
@@ -123,7 +123,7 @@ export const HitsWrapper = styled.div`
 
 export const PoweredBy = () => (
   <span css="font-size: 0.6em; text-align: end; padding: 0;">
-    Powered by{` `}
+    Powered by&nbsp;
     <a href="https://algolia.com" target="_blank">
       <Algolia size="1em" /> Algolia
     </a>
