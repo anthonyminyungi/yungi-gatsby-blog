@@ -1,8 +1,8 @@
 module.exports = {
-  title: `Yungi's Dev Blog`,
-  description: `Yungi's blog about Development study and Daily life`,
+  title: `DeveLife`,
+  description: `Develop product, Develop life, Develop myself.`,
   author: `[Anthony min]`,
-  introduction: `기술에 관심이 많은 대학생입니다. 배우는 것을 즐기며 지내고 있습니다.`,
+  introduction: `Develop product, Develop life, Develop myself.`,
   siteUrl: `https://yungis.dev`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
@@ -18,9 +18,12 @@ module.exports = {
     `js`,
     `web`,
     `react`,
+    `gatsby`,
     `frontend`,
     `develop`,
     `yungi`,
+    `develife`,
+    `develop`,
   ],
   comment: {
     disqusShortName: '', // Your disqus-short-name. check disqus.com.
