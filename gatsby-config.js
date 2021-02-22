@@ -1,4 +1,6 @@
 const metaConfig = require('./gatsby-meta-config')
+const queries = require('./src/utils/algolia')
+require('dotenv').config()
 
 module.exports = {
   siteMetadata: metaConfig,
@@ -161,6 +163,16 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        queries,
+        chunkSize: 10000, // default: 1000
+      },
+    },
+    `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,

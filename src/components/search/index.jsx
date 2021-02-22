@@ -1,0 +1,74 @@
+import React, { useState, useEffect, createRef } from 'react'
+import {
+  InstantSearch,
+  Index,
+  Hits,
+  connectStateResults,
+} from 'react-instantsearch-dom'
+import algoliasearch from 'algoliasearch/lite'
+
+// import { useOnClickOutside } from '../../hooks'
+import { Root, HitsWrapper, PoweredBy } from './styles'
+import Input from './input'
+import PostHit from './hitComps'
+
+const Results = connectStateResults(
+  ({ searchState: state, searchResults: res, children }) =>
+    res && res.nbHits > 0 ? children : `No results for '${state.query}'`
+)
+
+const Stats = connectStateResults(
+  ({ searchResults: res }) =>
+    res && res.nbHits > 0 && `${res.nbHits} result${res.nbHits > 1 ? `s` : ``}`
+)
+
+const useClickOutside = (ref, handler, events) => {
+  if (!events) events = [`mousedown`, `touchstart`]
+  const detectClickOutside = event =>
+    ref.current != null && !ref.current.contains(event.target) && handler()
+  useEffect(() => {
+    for (const event of events)
+      document.addEventListener(event, detectClickOutside)
+    return () => {
+      for (const event of events)
+        document.removeEventListener(event, detectClickOutside)
+    }
+  })
+}
+
+const Search = props => {
+  console.log(props)
+  const { indices, collapse } = props
+  const ref = createRef()
+  const [query, setQuery] = useState(``)
+  const [focus, setFocus] = useState(false)
+  const searchClient = algoliasearch(
+    process.env.GATSBY_ALGOLIA_APP_ID,
+    process.env.GATSBY_ALGOLIA_SEARCH_KEY
+  )
+  useClickOutside(ref, () => setFocus(false))
+  return (
+    <InstantSearch
+      searchClient={searchClient}
+      indexName={indices.name}
+      onSearchStateChange={({ query }) => setQuery(query)}
+      root={{ Root, props: { ref } }}
+    >
+      <Input onFocus={() => setFocus(true)} {...{ collapse, focus }} />
+      <HitsWrapper show={query.length > 0 && focus} collapse>
+        <Index key={indices.name} indexName={indices.name}>
+          <header>
+            <h3>{indices.title}</h3>
+            <Stats />
+          </header>
+          <Results>
+            <Hits hitComponent={PostHit(() => setFocus(false))} />
+          </Results>
+        </Index>
+        <PoweredBy />
+      </HitsWrapper>
+    </InstantSearch>
+  )
+}
+
+export default Search

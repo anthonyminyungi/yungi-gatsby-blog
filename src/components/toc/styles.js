@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { BookContent } from 'styled-icons/boxicons-regular/BookContent'
 import { Close as Cross } from 'styled-icons/material/Close'
-import mediaQuery from './mediaQuery'
+import mediaQuery from '../../utils/mediaQuery'
 
 const openTocDiv = css`
   padding: 0.7em 1.2em;
