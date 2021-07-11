@@ -88,4 +88,13 @@ body.dark {
   .thumbnail-date {
     color: $dark-link-color;
   }
+
+  td,
+  th {
+    border-bottom: 1px solid $dark-table-border-color;
+  }
+
+  hr {
+    background: $dark-separator-background;
+  }
 }
