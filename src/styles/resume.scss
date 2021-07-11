@@ -10,14 +10,15 @@
 
   h1 {
     padding-bottom: 0px;
+    padding-left: 8px;
     // line-height: 1.05;
     &::after {
       position: absolute;
       display: inline-block;
       top: 10px;
-      left: -32px;
-      width: 14px;
-      height: 14px;
+      left: -18px;
+      width: 16px;
+      height: 16px;
       border-radius: 50%;
       background-color: violet;
       content: '';
