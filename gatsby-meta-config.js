@@ -1,8 +1,8 @@
 module.exports = {
   title: `DeveLife`,
-  description: `Develop product, Develop life, Develop myself.`,
+  description: `Develop software, Develop myself, Develop life.`,
   author: `[Anthony min]`,
-  introduction: `Develop product, Develop life, Develop myself.`,
+  introduction: `Develop software, Develop myself, Develop life.`,
   siteUrl: `https://yungis.dev`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
