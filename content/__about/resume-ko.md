@@ -8,6 +8,8 @@ showToc: false
 
 # 민윤기 (Anthony)
 
+## 소개
+
 **저는 이런 개발자입니다.**
 
 * 호기심 많고, 도전적이며 문제 해결 과정에 열정적입니다.
@@ -17,8 +19,8 @@ showToc: false
 * 항상 배우려는 자세로 임하고, 지식과 경험 앞에 겸손하려 합니다.
 
 |            |                                      |
-| :--------: | ------------------------------------ |
-| **GitHub** | <https://github.com/anthonyminyungi> |
+| :--------: | :----------------------------------- |
+| **Github** | <https://github.com/anthonyminyungi> |
 |  **Blog**  | <https://yungis.dev>                 |
 | **Email**  | <yungi.anthony.min@gmail.com>        |
 
@@ -36,12 +38,13 @@ showToc: false
 
 # 업무 경험
 
-## N-Tech Service (NTS)
+<!-- ## N-Tech Service (NTS)
 
 |               |                |
 | :-----------: | -------------- |
 |   **기간**    | 2021.07 ~ 현재 |
 | **역할/직책** | 인턴           |
+ -->
 
 ## (주) 하얀마인드
 
