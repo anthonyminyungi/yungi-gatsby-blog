@@ -49,7 +49,7 @@ showToc: false
 ### 발견 콘텐츠 관리 어드민 페이지 구현
 
 * 2020.07
-* Next.js, SWR, MongoDB, Mongoose
+* Next.js, SWR, MongoDB, Mongoose, emotion
 
 #### 상세설명
 
@@ -62,6 +62,11 @@ showToc: false
 | :-----------: | ------------------ |
 |   **기간**    | 2020.06 ~ 2020.08  |
 | **역할/직책** | 백오피스 개발 인턴 |
+
+<br/>
+
+> 인턴십 기간 중 깃허브를 통한 협업과 커뮤니케이션 과정에서 많은 고민을 하게 되어  
+> 이 부분에 대한 [고찰을 담은 글](https://yungis.dev/github/thought-about-good-pr/)을 작성.
 
 ### COVID-19 알림 챗봇 제작
 
