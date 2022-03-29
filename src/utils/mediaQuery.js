@@ -7,7 +7,7 @@ export const screens = {
   phablet: 40,
   tablet: 50,
   netbook: 60,
-  laptop: 85,
+  laptop: 87,
   desktop: 100,
 }
 
