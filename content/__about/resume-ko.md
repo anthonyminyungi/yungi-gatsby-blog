@@ -4,7 +4,7 @@ date: 2021-09-03 14:12:30
 lang: 'ko'
 showToc: false
 ---
-<div align="right"><sub><i>최근 수정한 날짜: 2021.09.03</i></sub></div>
+<div align="right"><sub><i>최근 수정한 날짜: 2022.03.29</i></sub></div>
 
 # 민윤기 (Anthony)
 
@@ -45,7 +45,26 @@ showToc: false
 |   **기간**    | 2021.09 ~ 현재                |
 | **역할/직책** | SW교육플랫폼 개발 / 웹 개발자 |
 
-> 정규직 전환
+### 엔트리 신규 컨텐츠 발견/미래기술 런칭 및 리뉴얼
+
+* 2021.09 ~ 2021.03
+* Next.js, MongoDB, Mongoose, GraphQL, DataLoader, React-Query, Storybook, Zeplin, Emotion, Nginx, i18n
+
+#### 상세설명
+
+* 인턴 기간부터 작업하던 내용을 이어서 실제 서비스용 코드로 발전시키면서 개발 진행
+* 신규 컨텐츠 기획의 요구사항을 분석해 데이터 모델링, GraphQL API 작성
+* 사내 admin 및 서비스 웹의 관리자 페이지 구현, 스마트에디터 적용
+* 다국어 기반 서비스 웹의 사용자 페이지 구현
+
+### 엔트리 서스테이닝
+
+* 2022.02 ~  
+* Next.js, MongoDB, Mongoose, GraphQL, DataLoader, React-Query, Storybook, Zeplin, Emotion, Nginx, ElasticSearch, Docker, Kubernetes, monorepo(lerna), i18n
+
+#### 상세설명
+
+* 엔트리 admin/서비스 웹 관련 기능 및 UI 오류 개선 등 중소규모 마일스톤 이슈 처리
 
 ## N-Tech Service (NTS)
 
@@ -54,16 +73,16 @@ showToc: false
 |   **기간**    | 2021.07 ~ 2021.09 |
 | **역할/직책** | 개발 인턴         |
 
-### 엔트리 발견 컨텐츠 어드민, 웹 페이지 뷰 구현
+### 엔트리 발견 컨텐츠 어드민, 웹 구현
 
 * 2021.07 ~ 2021.09
-* Next.js, SWR, MongoDB, mongoose, GraphQL(urql), storybook, emotion, nginx
+* Next.js, SWR, MongoDB, Mongoose, GraphQL, React-Query, Bootstrap, Emotion, Nginx
 
 #### 상세설명
 
-* 인턴십 과정의 일환으로 실제 코드베이스가 아닌 copied project에서 파일럿 프로젝트 형식으로 작업하고, 멘토와 1:1 코드리뷰 진행.
-* 기획서(invision)을 바탕으로 발견 컨텐츠 관련 도큐먼트 설계 및 admin의 리스트, 생성, 수정, 미리보기 페이지 구현.
-* 기획 및 storybook을 바탕으로 발견 컨텐츠 관련 GraphQL API 정의 및 [엔트리 웹](https://playentry.org)의 상세, 수정 페이지 구현.
+* 인턴십 과정의 일환으로 실제 서비스 코드베이스가 아닌 일부만 클론된 환경에서 파일럿 프로젝트 형식으로 작업하고, 멘토와 1:1 코드리뷰 진행.
+* 기획서를 바탕으로 발견 컨텐츠 관련 일부 DB 모델 설계 및 admin의 리스트/생성/수정/미리보기 페이지 구현.
+* 기획 및 Storybook 마크업을 바탕으로 발견 컨텐츠 관련 일부 GraphQL API 정의 및 [엔트리 서비스 웹](https://playentry.org)의 상세/수정 페이지 구현.
 
 ## (주) 하얀마인드
 
@@ -133,7 +152,7 @@ showToc: false
 
 # 오픈소스 기여
 
-## React.js 공식 문서 한국어 번역
+## React.js 공식 문서 한국어 번역  
 
 * Github: <https://github.com/reactjs/ko.reactjs.org/pull/222>
 * 문서: <https://ko.reactjs.org/docs/error-boundaries.html>
