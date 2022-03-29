@@ -1,5 +1,12 @@
 // app
-$theme-gradient: linear-gradient(72deg, coral, violet);
+$theme-gradient: linear-gradient(
+  -45deg,
+  tomato,
+  coral,
+  gold,
+  deeppink,
+  hotpink
+);
 $top-header-text-color: #fff;
 
 /**
