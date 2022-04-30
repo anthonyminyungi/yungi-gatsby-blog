@@ -47,7 +47,7 @@ showToc: false
 
 ### 엔트리 신규 컨텐츠 발견/미래기술 런칭 및 리뉴얼
 
-* 2021.09 ~ 2021.03
+* 2021.09 ~ 2022.04
 * Next.js, MongoDB, Mongoose, GraphQL, DataLoader, React-Query, Storybook, Zeplin, Emotion, Nginx, i18n
 
 #### 상세설명
@@ -56,6 +56,7 @@ showToc: false
 * 신규 컨텐츠 기획의 요구사항을 분석해 데이터 모델링, GraphQL API 작성
 * 사내 admin 및 서비스 웹의 관리자 페이지 구현, 스마트에디터 적용
 * 다국어 기반 서비스 웹의 사용자 페이지 구현
+* 기획자, 디자이너와 직접 커뮤니케이션하며 기획 및 디자인 수정사항 대응
 
 ### 엔트리 서스테이닝
 
