@@ -161,11 +161,16 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require('sass'),
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-lodash`,
     `gatsby-plugin-sitemap`,
   ],
