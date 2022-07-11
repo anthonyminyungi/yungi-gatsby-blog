@@ -70,3 +70,7 @@ yarn-error.log
 
 # iCloud file
 *.icloud
+
+# lockfile
+package-lock.json
+yarn.lock
