@@ -4,7 +4,7 @@ date: 2021-09-03 14:12:30
 lang: 'ko'
 showToc: false
 ---
-<div align="right"><sub><i>최근 수정한 날짜: 2022.04.29</i></sub></div>
+<div align="right"><sub><i>최근 수정한 날짜: 2022.07.11</i></sub></div>
 
 # 민윤기 (Anthony)
 
@@ -45,10 +45,10 @@ showToc: false
 |   **기간**    | 2021.09 ~ 현재                |
 | **역할/직책** | SW교육플랫폼 개발 / 웹 개발자 |
 
-### 엔트리 신규 컨텐츠 발견/미래기술 런칭 및 리뉴얼
+### 엔트리 신규 컨텐츠 발견 런칭 및 리뉴얼
 
 * 2021.09 ~ 2022.04
-* Next.js, MongoDB, Mongoose, GraphQL, DataLoader, React-Query, Storybook, Zeplin, Emotion, Nginx, i18n
+* Next.js, Node.js, MongoDB, Mongoose, GraphQL, DataLoader, React-Query, Storybook, Zeplin, Emotion, Nginx, i18n
 
 #### 상세설명
 
@@ -56,16 +56,28 @@ showToc: false
 * 신규 컨텐츠 기획의 요구사항을 분석해 데이터 모델링, GraphQL API 작성
 * 사내 admin 및 서비스 웹의 관리자 페이지 구현, 스마트에디터 적용
 * 다국어 기반 서비스 웹의 사용자 페이지 구현
-* 기획자, 디자이너와 직접 커뮤니케이션하며 기획 및 디자인 수정사항 대응
+* 기획자, 디자이너와 직접 커뮤니케이션하며 기획 및 디자인 수정 및 개선사항 대응
 
-### 엔트리 서스테이닝
+### 엔트리 / 라인엔트리 서스테이닝
 
 * 2022.02 ~  
-* Next.js, MongoDB, Mongoose, GraphQL, DataLoader, React-Query, Storybook, Zeplin, Emotion, Nginx, ElasticSearch, Docker, Kubernetes, monorepo(lerna), i18n
+* Next.js, Node.js, MongoDB, Mongoose, GraphQL, DataLoader, React-Query, Storybook, Zeplin, Emotion, Nginx, ElasticSearch, Docker, Kubernetes, monorepo(lerna), i18n
 
 #### 상세설명
 
 * 엔트리 admin/서비스 웹 관련 기능 및 UI 오류 개선 등 중소규모 마일스톤 이슈 처리
+* 일본 라인엔트리 리뉴얼 프로젝트 QA 대응을 지원하며 다국어, 마크업 이슈 등과 함께 한국 엔트리와 공통된 이슈 처리
+
+### 수작업 자동화 스크립트 작성
+
+* Node.js, mongoose, Octokit
+
+
+#### 상세설명
+
+* 수기로 Mongoose 스키마를 csv 테이블 형태로 각 필드에 대한 설명을 문서화하던 작업을 반자동화하여 스크립트 실행으로 기존 스키마 수정 및 신규 스키마 생성 시 csv를 만들도록 작업
+* 매주 수기로 팀 내에서 처리한 이슈들을 내부 양식에 맞게 정리하여 작성하는 주간보고서를 github의 octokit api를 사용한 스크립트로 반자동화하여 스크립트 실행으로 이슈 리스트를 불러와 마크다운으로 포매팅하여 보고서 이슈를 생성하도록 작업
+
 
 ## N-Tech Service (NTS)
 
@@ -77,7 +89,7 @@ showToc: false
 ### 엔트리 발견 컨텐츠 어드민, 웹 구현
 
 * 2021.07 ~ 2021.09
-* Next.js, SWR, MongoDB, Mongoose, GraphQL, React-Query, Bootstrap, Emotion, Nginx
+* Next.js, Node.js, MongoDB, Mongoose, GraphQL, React-Query, Tailwind-CSS, Emotion, Nginx
 
 #### 상세설명
 
