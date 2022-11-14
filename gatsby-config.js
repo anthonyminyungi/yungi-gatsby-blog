@@ -29,13 +29,15 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-code-titles',
-            options: {},
-          }, // IMPORTANT: this must be ahead of other plugins that use code blocks
+            resolve: `gatsby-remark-katex`,
+            options: {
+              strict: `ignore`,
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 1200,
               linkImagesToOriginal: false,
             },
           },
@@ -55,18 +57,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: 'language-',
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: false,
-              noInlineHighlight: false,
-            },
-          },
-          {
-            resolve: `gatsby-remark-katex`,
-            options: {
-              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
-              strict: `ignore`,
+              inlineCodeMarker: '%',
             },
           },
           `gatsby-remark-copy-linked-files`,
@@ -80,6 +71,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: metaConfig.ga,
+        head: true,
+        anonymize: true,
       },
     },
     {
@@ -105,72 +98,26 @@ module.exports = {
       options: {
         host: 'https://yungis.dev',
         sitemap: 'https://yungis.dev/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-feed`,
-      options: {
-        query: `
+        policy: [
           {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-                site_url: siteUrl
-              }
-            }
-          }
-        `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }],
-                })
-              })
-            },
-            query: `
-              {
-                allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                ) {
-                  edges {                     node {
-                    excerpt
-                    html
-                    fields { slug }
-                    frontmatter {
-                      title
-                      date
-                      showToc
-                    }
-                  }
-                }
-              }
-            }
-          `,
-            output: '/rss.xml',
-            title: "Your Site's RSS Feed",
+            userAgent: '*',
+            allow: '/',
           },
         ],
       },
     },
     {
-      resolve: `gatsby-plugin-sass`,
+      resolve: `gatsby-plugin-google-adsense`,
       options: {
-        implementation: require('sass'),
+        publisherId: metaConfig.ad,
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
     `gatsby-plugin-lodash`,
     `gatsby-plugin-sitemap`,
   ],

@@ -5,7 +5,7 @@ lang: 'ko'
 showToc: false
 ---
 
-<div align="right"><sub><i>최근 수정한 날짜: 2022.09.11</i></sub></div>
+<div align="right"><sub><i>최근 수정한 날짜: 2022.11.12</i></sub></div>
 
 # 민윤기 (Anthony)
 
@@ -49,12 +49,12 @@ showToc: false
 ### 엔트리 신규 프로젝트 개발 (진행중)
 
 - 2022.08 ~
-- Typescript, Next.js, Node.js Type-GraphQL, Graphql-code-gen, React-Query, MSW, React-Bootstrap, Emotion, Zeplin
+- Typescript, Next.js, Node.js, MongoDB, Mongoose, Type-GraphQL, DataLoader, React-Hook-Form, React-Query, MSW, React-Bootstrap, Emotion, Zeplin
 
 #### 상세 설명
 
-- 서비스 기획서와 어드민 기획서를 바탕으로 어드민에서 활용할 데이터 타입 및 API 명세, 데이터 및 API 모킹
-- 어드민 기획서를 바탕으로 어드민 페이지 화면 개발
+- 서비스와 어드민 기획서를 바탕으로 어드민에서 활용할 데이터 타입 명세, API 설계 및 구현
+- 어드민 기획서를 바탕으로 API 모킹을 활용한 어드민 페이지 화면 개발
 
 ### 엔트리 발견 컨텐츠 기능 런칭 및 리뉴얼
 
@@ -79,7 +79,7 @@ showToc: false
 - 엔트리 admin/서비스 웹 관련 기능 및 UI 오류 개선 등 중소규모 마일스톤 이슈 처리
 - 일본 라인엔트리 리뉴얼 프로젝트 QA 대응을 지원하며 다국어, 마크업 이슈 등과 함께 한국 엔트리와 공통된 이슈 처리
 
-### 수작업 자동화 스크립트 작성
+### 수동 작업 자동화 스크립트 작성
 
 - Node.js, mongoose, Octokit
 
@@ -153,11 +153,11 @@ showToc: false
 
 #### 상세설명
 
-- 백오피스의 컨텐츠 문서 생성 페이지의 태그 선택 기능을 기존의 가독성이 떨어지는 Dropdown 방식에서 Checkbox를 활용한 UI로 변경하는 작업 수행.
-- 백오피스에 검색 기능을 추가하는 프로젝트 진행.
+- 백오피스의 컨텐츠 문서 생성 페이지의 태그 선택 기능을 기존의 가독성이 떨어지는 Dropdown List 방식에서 Checkbox를 활용한 UI로 변경하는 작업 수행.
+- 백오피스에 검색 기능을 추가하는 소규모 프로젝트 진행.
   - Algolia를 활용해 컬렉션 별 검색 인덱스를 생성하고 Firesotre의 데이터 변경이 이루어질때마다 검색 인덱스를 업데이트 하도록 트리거 구성.
-  - API call 최소화를 위해 Search Input에 대해 Debounce 적용.
-- 이외 백오피스 프로젝트의 크고 작은 이슈 해결 업무 수행.
+  - API 호출 최소화를 위해 Search Input에 대해 Debounce 적용.
+- 이외 백오피스 프로젝트 내 마일스톤 이슈 해결 및 유지보수 업무 수행.
 
 ### 사내 홈페이지 리뉴얼
 
