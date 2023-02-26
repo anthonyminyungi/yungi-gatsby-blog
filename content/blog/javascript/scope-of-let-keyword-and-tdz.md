@@ -1,9 +1,9 @@
 ---
-title: scope-of-let-keyword-and-tdz
+title: 자바스크립트 let 키워드의 스코프와 TDZ
 date: 2023-02-26 22:02:76
 category: javascript
-thumbnail: { thumbnailSrc }
 draft: false
+showToc: true
 ---
 
 ## 의문의 출발점
@@ -29,12 +29,8 @@ let 키워드와 var 키워드와의 차이점 중 변수 호이스팅에 대해
 
 라는 내용을 설명하다가 등장한 예시였다.
 
-<figure>
-    <img src="./images/let-variable-lifecycle.png" alt="let 변수의 생명주기">
-    <figcaption>
-        let 변수 생명주기와 일시적 사각지대, TDZ <a href="https://noogoonaa.tistory.com/78">출처</a>
-    </figcaption>
-</figure>
+아래는 let 변수의 생명주기와 일시적 사각지대, 그리고 TDZ에 대해 설명하는 그림이다. ([출처](https://noogoonaa.tistory.com/78))
+![let 변수의 생명주기](./images/let-variable-lifecycle.png)
 
 이어서, let 키워드로 선언한 변수는 변수 호이스팅이 발생하지 않는 것처럼 보이지만, 실제로는 그렇지 않다는 것을 보여주는 다음의 예제이다.
 
