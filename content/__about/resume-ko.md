@@ -219,17 +219,13 @@ showToc: false
 - BeautifulSoup을 활용해 Melon 차트, YouTube Video id를 크롤링하고 Crontab을 통해 자동화.
 - 19년 8월 배포, 무료서버 만료 이후 종료.
 
-<br/>
-
 <div align="center" class="end">
 
 _읽어주셔서 감사합니다._
 
-</br>
+<br>
 
 ---
-
-<br/>
 
 <sub><sup>Software Engineer, <a href="https://github.com/anthonyminyungi">@Anthony Min</a></sup></sub>
 
