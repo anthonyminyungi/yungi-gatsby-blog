@@ -73,13 +73,14 @@ showToc: false
 
 ### 엔트리 서스테이닝
 
-- 2022.02 ~
+- 2022.02 ~ 2022.12
 - Next.js, Node.js, Express, MongoDB, Mongoose, GraphQL, DataLoader, React-Query, Storybook, Zeplin, Emotion, Nginx, ElasticSearch, monorepo(lerna), i18n
 
 #### 상세설명
 
 - 엔트리 admin/서비스 웹 관련 기능 및 UI 오류 개선 등 중소규모 마일스톤 이슈 처리
 - (22.05~ 22.08) 일본 라인엔트리 리뉴얼 프로젝트 QA 대응을 지원하며 다국어, 마크업 이슈 등과 함께 한국 엔트리와 공통된 이슈 처리 (리뉴얼 중단, fade-out)
+- 신규 프로젝트 투입으로 서스테이닝 업무 축소
 
 ### 수동 작업 자동화 스크립트 작성
 
