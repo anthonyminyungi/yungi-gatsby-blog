@@ -5,7 +5,7 @@ lang: 'ko'
 showToc: false
 ---
 
-<div align="right"><sub><i>최근 수정한 날짜: 2022.11.12</i></sub></div>
+<div align="right"><sub><i>최근 수정한 날짜: 2023.6.18</i></sub></div>
 
 # 민윤기 (Anthony)
 
@@ -49,12 +49,14 @@ showToc: false
 ### 엔트리 신규 프로젝트 개발 (진행중)
 
 - 2022.08 ~
-- Typescript, Next.js, Node.js, MongoDB, Mongoose, Type-GraphQL, DataLoader, React-Hook-Form, React-Query, MSW, React-Bootstrap, Emotion, Zeplin
+- Typescript, Next.js, Node.js, Express, MongoDB, Mongoose, Type-GraphQL, DataLoader, Jotai, React-Query, MSW, Storybook, React-Bootstrap, Zeplin, Emotion, Nginx, ElasticSearch, monorepo(lerna), i18n
 
 #### 상세 설명
 
-- 서비스와 어드민 기획서를 바탕으로 어드민에서 활용할 데이터 타입 명세, API 설계 및 구현
-- 어드민 기획서를 바탕으로 API 모킹을 활용한 어드민 페이지 화면 개발
+- 어드민 기획서를 바탕으로 데이터 타입 명세, API 설계 및 구현, 설계된 API와 화면설계서를 활용하여 어드민 페이지 구현
+- 서비스 기획서와 어드민 API를 바탕으로 서비스 API 설계 및 구현, 설계된 API와 화면설계서를 바탕으로 서비스 페이지 구현
+- 기획팀과 직,간접적으로 의사소통하여 스펙 구체화 논의 및 개발 완료건 QA 대응 진행
+- 타 부서 개발팀과 의사소통하며 서비스 마크업 및 라이브러리 개발 협업
 
 ### 엔트리 발견 컨텐츠 기능 런칭 및 리뉴얼
 
@@ -69,19 +71,19 @@ showToc: false
 - 다국어 기반 서비스 웹의 사용자 페이지 구현
 - 기획자, 디자이너와 직접 커뮤니케이션하며 기획 및 디자인 수정 및 개선사항 대응
 
-### 엔트리 / 라인엔트리 서스테이닝
+### 엔트리 서스테이닝
 
 - 2022.02 ~
-- Next.js, Node.js, MongoDB, Mongoose, GraphQL, DataLoader, React-Query, Storybook, Zeplin, Emotion, Nginx, ElasticSearch, Docker, Kubernetes, monorepo(lerna), i18n
+- Next.js, Node.js, Express, MongoDB, Mongoose, GraphQL, DataLoader, React-Query, Storybook, Zeplin, Emotion, Nginx, ElasticSearch, monorepo(lerna), i18n
 
 #### 상세설명
 
 - 엔트리 admin/서비스 웹 관련 기능 및 UI 오류 개선 등 중소규모 마일스톤 이슈 처리
-- 일본 라인엔트리 리뉴얼 프로젝트 QA 대응을 지원하며 다국어, 마크업 이슈 등과 함께 한국 엔트리와 공통된 이슈 처리
+- (22.05~ 22.08) 일본 라인엔트리 리뉴얼 프로젝트 QA 대응을 지원하며 다국어, 마크업 이슈 등과 함께 한국 엔트리와 공통된 이슈 처리 (리뉴얼 중단, fade-out)
 
 ### 수동 작업 자동화 스크립트 작성
 
-- Node.js, mongoose, Octokit
+- Node.js, mongoose, Octokit, Lambda
 
 #### 상세설명
 
@@ -95,10 +97,10 @@ showToc: false
 |   **기간**    | 2021.07 ~ 2021.09 |
 | **역할/직책** | 개발 인턴         |
 
-### 엔트리 발견 컨텐츠 어드민, 웹 구현
+### 엔트리 발견 컨텐츠 어드민, 서비스 웹 구현
 
 - 2021.07 ~ 2021.09
-- Next.js, Node.js, MongoDB, Mongoose, GraphQL, React-Query, Tailwind-CSS, Emotion, Nginx
+- Next.js, Node.js, MongoDB, Mongoose, GraphQL, React-Query, Class-based CSS(internal), Emotion, Nginx
 
 #### 상세설명
 
@@ -229,6 +231,6 @@ _읽어주셔서 감사합니다._
 
 <br/>
 
-<sub><sup>Frontend Engineer, <a href="https://github.com/anthonyminyungi">@Anthony Min</a></sup></sub>
+<sub><sup>Software Engineer, <a href="https://github.com/anthonyminyungi">@Anthony Min</a></sup></sub>
 
 </div>
