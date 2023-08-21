@@ -8,7 +8,7 @@ module.exports = {
       ? 'http://localhost:8000'
       : `https://yungis.dev`, // Your blog site url
   social: {
-    twitter: ``, // Your Twitter account
+    twitter: `dope_a_minn`, // Your Twitter account
     github: `anthonyminyungi`, // Your GitHub account
     medium: ``, // Your Medium account
     facebook: `dbstnsdl12`, // Your Facebook account
