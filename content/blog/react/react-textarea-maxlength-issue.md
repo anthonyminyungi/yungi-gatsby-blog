@@ -2,9 +2,9 @@
 title: React에서 textarea의 입력 길이를 제한할 때 고려할 점
 date: 2023-08-21 01:08:86
 category: react
-thumbnail: { thumbnailSrc }
 draft: false
 showToc: true
+ogImage: './images/react-textarea-maxlength-issue.png'
 ---
 
 ![thumbnail](./images/react-textarea-maxlength-issue.png)

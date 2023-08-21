@@ -35,7 +35,11 @@ export default ({ data, pageContext, location }) => {
       location={location}
       title={title}
     >
-      <Head title={post.frontmatter.title} description={post.excerpt} />
+      <Head
+        title={post.frontmatter.title}
+        description={post.excerpt}
+        ogImage={post.frontmatter.ogImage}
+      />
       <PostTitle title={post.frontmatter.title} />
       <PostDate date={post.frontmatter.date} />
       <PostContainer html={post.html} />
@@ -83,6 +87,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "YYYY/MM/DD")
         showToc
+        ogImage {
+          childImageSharp {
+            fluid {
+              src
+            }
+          }
+        }
       }
     }
   }

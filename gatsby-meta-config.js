@@ -3,7 +3,10 @@ module.exports = {
   description: `Develop software, Develop myself, Develop life.`,
   author: `[Anthony min]`,
   introduction: `Develop software, Develop myself, Develop life.`,
-  siteUrl: `https://yungis.dev`, // Your blog site url
+  siteUrl:
+    process.env.NODE_ENV === 'development'
+      ? 'http://localhost:8000'
+      : `https://yungis.dev`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
     github: `anthonyminyungi`, // Your GitHub account
