@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import _isEmpty from 'lodash/isEmpty'
+import _get from 'lodash/get'
 
 export function Head({ description, lang, meta, keywords, title, ogImage }) {
   return (
@@ -10,7 +12,11 @@ export function Head({ description, lang, meta, keywords, title, ogImage }) {
       render={data => {
         const metaDescription =
           description || data.site.siteMetadata.description
-        const ogImageUrl = `${data.site.siteMetadata.siteUrl}${ogImage.childImageSharp.fluid.src}`
+        const ogImageResult = _get(
+          _isEmpty(ogImage) ? data.defaultOgImage : ogImage,
+          'childImageSharp.fluid.src'
+        )
+        const ogImageUrl = `${data.site.siteMetadata.siteUrl}${ogImageResult}`
         return (
           <Helmet
             htmlAttributes={{
@@ -100,6 +106,13 @@ Head.propTypes = {
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
+    defaultOgImage: file(absolutePath: { regex: "/DefaultThumbnail.png/" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     site {
       siteMetadata {
         title

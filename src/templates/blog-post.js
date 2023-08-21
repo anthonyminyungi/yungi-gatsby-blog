@@ -90,7 +90,7 @@ export const pageQuery = graphql`
         ogImage {
           childImageSharp {
             fluid {
-              src
+              ...GatsbyImageSharpFluid
             }
           }
         }

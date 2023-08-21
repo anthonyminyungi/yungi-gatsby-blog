@@ -23,7 +23,7 @@ export const Layout = ({ showToc, location, title, children }) => {
           outline: 'none',
         }}
       >
-        {showToc !== undefined ? showToc && <Toc /> : null}
+        {showToc != null ? showToc && <Toc /> : null}
         <div
           className="post_wrapper"
           style={{
