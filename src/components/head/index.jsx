@@ -12,10 +12,7 @@ export function Head({ description, lang, meta, keywords, title, ogImage }) {
       render={data => {
         const metaDescription =
           description || data.site.siteMetadata.description
-        const ogImageResult = _get(
-          _isEmpty(ogImage) ? data.defaultOgImage : ogImage,
-          'childImageSharp.fluid.src'
-        )
+        const ogImageResult = _get(ogImage, 'childImageSharp.fluid.src')
         const ogImageUrl = `${data.site.siteMetadata.siteUrl}${ogImageResult}`
         return (
           <Helmet
@@ -106,13 +103,6 @@ Head.propTypes = {
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
-    defaultOgImage: file(absolutePath: { regex: "/DefaultThumbnail.png/" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     site {
       siteMetadata {
         title

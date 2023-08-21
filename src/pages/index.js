@@ -73,7 +73,11 @@ export default ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteMetadata.title}>
-      <Head title={HOME_TITLE} keywords={siteMetadata.keywords} />
+      <Head
+        title={HOME_TITLE}
+        keywords={siteMetadata.keywords}
+        ogImage={data.ogImage}
+      />
       <Bio />
       <Category
         categories={categories}
@@ -122,6 +126,13 @@ export const pageQuery = graphql`
             category
             draft
           }
+        }
+      }
+    }
+    ogImage: file(absolutePath: { regex: "/DefaultThumbnail.png/" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }

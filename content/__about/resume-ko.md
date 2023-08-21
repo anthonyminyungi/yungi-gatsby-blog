@@ -3,6 +3,7 @@ title: 'about'
 date: 2021-09-03 14:12:30
 lang: 'ko'
 showToc: false
+ogImage: '../assets/DefaultThumbnail.png'
 ---
 
 <div align="right"><sub><i>최근 수정한 날짜: 2023.6.18</i></sub></div>

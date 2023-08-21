@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import { rhythm } from '../utils/typography'
 import * as Lang from '../constants'
 import '../styles/resume.scss'
+import { Head } from '../components/head'
 
 export default ({ data }) => {
   const resumes = data.allMarkdownRemark.edges
@@ -12,19 +13,22 @@ export default ({ data }) => {
     .map(({ node }) => node)[0]
 
   return (
-    <div
-      className="about"
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        maxWidth: rhythm(28),
-        padding: `${rhythm(0.5)} ${rhythm(3 / 4)} ${rhythm(1.5)} ${rhythm(
-          3 / 4
-        )}`,
-      }}
-    >
-      <div dangerouslySetInnerHTML={{ __html: resume.html }} />
-    </div>
+    <>
+      <Head title="About" ogImage={data.ogImage} />
+      <div
+        className="about"
+        style={{
+          marginLeft: `auto`,
+          marginRight: `auto`,
+          maxWidth: rhythm(28),
+          padding: `${rhythm(0.5)} ${rhythm(3 / 4)} ${rhythm(1.5)} ${rhythm(
+            3 / 4
+          )}`,
+        }}
+      >
+        <div dangerouslySetInnerHTML={{ __html: resume.html }} />
+      </div>
+    </>
   )
 }
 
@@ -41,6 +45,13 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             lang
           }
+        }
+      }
+    }
+    ogImage: file(absolutePath: { regex: "/DefaultThumbnail.png/" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }
