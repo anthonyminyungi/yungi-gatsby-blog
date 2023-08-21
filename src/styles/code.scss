@@ -316,6 +316,13 @@ pre[class='language-js']::before {
   color: black;
 }
 
+pre[class='language-typescript']::before,
+pre[class='language-ts']::before {
+  content: 'ts';
+  background: #3b85cb;
+  color: white;
+}
+
 pre[class='language-html']::before {
   content: 'html';
   background: #005a9c;
@@ -331,6 +338,12 @@ pre[class='language-css']::before {
 pre[class='language-jsx']::before {
   content: 'jsx';
   background: #61dafb;
+  color: white;
+}
+
+pre[class='language-tsx']::before {
+  content: 'tsx';
+  background: #397fc1;
   color: white;
 }
 
