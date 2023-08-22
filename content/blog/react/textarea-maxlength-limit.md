@@ -4,10 +4,10 @@ date: 2023-08-21 01:08:86
 category: react
 draft: false
 showToc: true
-ogImage: './images/react-textarea-maxlength-limit.png'
+ogImage: './images/textarea-maxlength-limit.png'
 ---
 
-![thumbnail](./images/react-textarea-maxlength-limit.png)
+![thumbnail](./images/textarea-maxlength-limit.png)
 
 # 사건의 발단
 
