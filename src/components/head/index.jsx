@@ -30,6 +30,10 @@ export function Head({ description, lang, meta, keywords, title, ogImage }) {
                 content: metaDescription,
               },
               {
+                property: `og:url`,
+                content: data.site.siteMetadata.siteUrl,
+              },
+              {
                 property: `og:title`,
                 content: title,
               },
