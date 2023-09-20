@@ -14,6 +14,8 @@ module.exports = {
     facebook: `dbstnsdl12`, // Your Facebook account
     instagram: `yungis_`,
   },
+  externalResumeUrl:
+    'https://anthonymin.notion.site/e84bb089d5024f28811bbba44cdcfb19',
   icon: `content/assets/felog.png`, // Add your favicon
   keywords: [
     `blog`,
