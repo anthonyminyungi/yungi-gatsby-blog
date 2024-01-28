@@ -2,8 +2,8 @@
 title: (번역) 최고의 성능을 위한 Next.js 애플리케이션 아키텍처
 date: 2023-02-28 13:07:57
 category: next.js
-draft: false
-showToc: true
+draft: true
+showToc: false
 ---
 
 > 원문: [NextJs Application Architecture for best performance](https://medium.com/@sushinpv/nextjs-application-architecture-for-best-performance-8f1d22e33ba1)
